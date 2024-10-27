@@ -1,0 +1,420 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp21xellyi6ju"]
+
+[ext_resource type="PackedScene" uid="uid://dpti3n3uq12nn" path="res://player.tscn" id="1_fahhs"]
+[ext_resource type="Script" path="res://game.gd" id="1_hw7dd"]
+[ext_resource type="PackedScene" uid="uid://cvxhrp2bm3y8r" path="res://pine_tree.tscn" id="2_hjiot"]
+
+[sub_resource type="Curve2D" id="Curve2D_sprxx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1068.01, -853.991, 0, 0, 0, 0, 2224, -859, 0, 0, 0, 0, 2224, 1319, 0, 0, 0, 0, -1072, 1319, 0, 0, 0, 0, -1068.01, -848.982)
+}
+point_count = 5
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_hw7dd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -1014.0
+offset_top = -632.0
+offset_right = 2076.0
+offset_bottom = 1151.0
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1930, -560)
+
+[node name="StaticBody2D" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4489, 863)
+
+[node name="StaticBody2D" parent="CanvasLayer/StaticBody2D/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D12" parent="CanvasLayer/StaticBody2D/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D2" parent="CanvasLayer/StaticBody2D/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D3" parent="CanvasLayer/StaticBody2D/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D6" parent="CanvasLayer/StaticBody2D/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D12" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4373, 879)
+
+[node name="StaticBody2D2" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4413, 803)
+
+[node name="StaticBody2D3" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4549, 839)
+
+[node name="StaticBody2D4" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4304, 267)
+
+[node name="StaticBody2D6" parent="CanvasLayer/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(4489, 731)
+
+[node name="StaticBody2D10" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1926, 372)
+
+[node name="StaticBody2D11" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-2034, 292)
+
+[node name="StaticBody2D12" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-2046, -544)
+
+[node name="StaticBody2D2" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-2006, -620)
+
+[node name="StaticBody2D3" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1870, -584)
+
+[node name="StaticBody2D4" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1818, -536)
+
+[node name="StaticBody2D5" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1494, 488)
+
+[node name="StaticBody2D5" parent="CanvasLayer/StaticBody2D5" instance=ExtResource("2_hjiot")]
+position = Vector2(-171.957, -528.357)
+
+[node name="StaticBody2D6" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-1930, -692)
+
+[node name="StaticBody2D7" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(-330, -1212)
+
+[node name="StaticBody2D8" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(686, -700)
+
+[node name="StaticBody2D9" parent="CanvasLayer" instance=ExtResource("2_hjiot")]
+position = Vector2(1070, -1380)
+
+[node name="Player" parent="." instance=ExtResource("1_fahhs")]
+position = Vector2(564, 336)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-566.699, -333.578)
+scale = Vector2(1.00121, 0.998163)
+curve = SubResource("Curve2D_sprxx")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(1591.13, -858.037)
+rotation = -0.00152155
+progress = 2659.15
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(204, 491)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(846, 104)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(905, 137)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(785, 135)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(259, 157)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1064, 585)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(753, 307)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1141, 28)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(119, 782)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-150, 316)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-63, -100)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(406, -86)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(764, 755)
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-209, 351)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-92, 355)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-156, 386)
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-105, -41)
+
+[node name="StaticBody2D18" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(109, 580)
+
+[node name="StaticBody2D19" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(996, 672)
+
+[node name="StaticBody2D20" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1070, 708)
+
+[node name="StaticBody2D21" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1192, 418)
+
+[node name="StaticBody2D22" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1257, 438)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.513726)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.729412, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Game Over"
+
+[node name="StaticBody2D23" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-1333.96, -1012.36)
+
+[node name="StaticBody2D" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(3967.96, 1.35718)
+
+[node name="StaticBody2D12" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(-1676.04, 136.357)
+
+[node name="StaticBody2D2" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(3891.96, -58.6428)
+
+[node name="StaticBody2D3" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(4027.96, -22.6428)
+
+[node name="StaticBody2D4" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(-128.043, 2271.36)
+
+[node name="StaticBody2D6" parent="StaticBody2D23" instance=ExtResource("2_hjiot")]
+position = Vector2(3967.96, -130.643)
+
+[node name="StaticBody2D24" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1274, 1316)
+
+[node name="StaticBody2D25" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1562, 992)
+
+[node name="StaticBody2D26" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-194, 1108)
+
+[node name="StaticBody2D27" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1818, 572)
+
+[node name="StaticBody2D28" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1398, -240)
+
+[node name="StaticBody2D" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1146, -400)
+
+[node name="StaticBody2D12" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1994, -468)
+
+[node name="StaticBody2D2" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1850, -292)
+
+[node name="StaticBody2D3" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1734, -92)
+
+[node name="StaticBody2D4" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1766, -460)
+
+[node name="StaticBody2D6" parent="StaticBody2D28/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1878, -616)
+
+[node name="StaticBody2D12" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D2" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D3" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D4" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D6" parent="StaticBody2D28" instance=ExtResource("2_hjiot")]
+position = Vector2(524, 92)
+
+[node name="StaticBody2D" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-628.043, 516.357)
+
+[node name="StaticBody2D" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1878, -484)
+
+[node name="StaticBody2D12" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1994, -468)
+
+[node name="StaticBody2D2" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1954, -544)
+
+[node name="StaticBody2D3" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1818, -508)
+
+[node name="StaticBody2D4" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1766, -460)
+
+[node name="StaticBody2D6" parent="StaticBody2D28/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1878, -616)
+
+[node name="StaticBody2D12" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-388.043, 520.357)
+
+[node name="StaticBody2D2" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-724.043, 216.357)
+
+[node name="StaticBody2D3" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-592.043, 212.357)
+
+[node name="StaticBody2D4" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-448.043, 128.357)
+
+[node name="StaticBody2D6" parent="StaticBody2D28/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-700, 1676)
+
+[node name="StaticBody2D" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-148, -60)
+
+[node name="StaticBody2D" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1878, -484)
+
+[node name="StaticBody2D12" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1994, -468)
+
+[node name="StaticBody2D2" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1954, -544)
+
+[node name="StaticBody2D3" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-661.957, -400.357)
+
+[node name="StaticBody2D4" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1766, -460)
+
+[node name="StaticBody2D6" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6/StaticBody2D" instance=ExtResource("2_hjiot")]
+position = Vector2(-1878, -616)
+
+[node name="StaticBody2D12" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-148, -60)
+
+[node name="StaticBody2D2" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-148, -60)
+
+[node name="StaticBody2D3" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(796, 76)
+
+[node name="StaticBody2D4" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(-68, -240)
+
+[node name="StaticBody2D6" parent="StaticBody2D28/StaticBody2D6/StaticBody2D6" instance=ExtResource("2_hjiot")]
+position = Vector2(576.043, -332.357)
+
+[node name="StaticBody2D29" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-626, 2451)
+
+[node name="StaticBody2D" parent="StaticBody2D29" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D12" parent="StaticBody2D29" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D2" parent="StaticBody2D29" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D3" parent="StaticBody2D29" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D6" parent="StaticBody2D29" instance=ExtResource("2_hjiot")]
+position = Vector2(-3274, 1529)
+
+[node name="StaticBody2D30" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(641, 2478)
+
+[node name="StaticBody2D31" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(416, 1535)
+
+[node name="StaticBody2D32" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(210, 2155)
+
+[node name="StaticBody2D33" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1575, 2101)
+
+[node name="StaticBody2D34" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-1469, 1868)
+
+[node name="StaticBody2D35" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-1685, 2272)
+
+[node name="StaticBody2D36" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(2994, 1060)
+
+[node name="StaticBody2D37" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(2940, 1886)
+
+[node name="StaticBody2D38" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(3120, -673)
+
+[node name="StaticBody2D39" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(3111, -170)
+
+[node name="StaticBody2D40" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(1943, -1365)
+
+[node name="StaticBody2D41" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(2491, 809)
+
+[node name="StaticBody2D42" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(3416, 324)
+
+[node name="StaticBody2D43" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-2313, 1024)
+
+[node name="StaticBody2D44" parent="." instance=ExtResource("2_hjiot")]
+position = Vector2(-2089, 1491)
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
