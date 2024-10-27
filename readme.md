@@ -1,6 +1,6 @@
 This is my first game in godot engine.
 
-# How to Run?
+## How to Run?
 
 > Install Godot Engine: 
 https://godotengine.org/download/windows/
@@ -10,3 +10,7 @@ https://godotengine.org/download/windows/
 Now you can run `game.tscn` in godot and play...
 
 **Done !!!** 
+
+## How to play game without installing external engine.
+
+> Double click on `Survival_shooter.exe`
